@@ -1,42 +1,723 @@
-אני צריכה שתבנה לי לו״ז יפה לדובאי
-התאריכים 4-8/9
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-טיסה בשעה 11:40- 16:00
-נוחתים ביום שישי בשעה 16:00
-לוקחים רכב מהשדה
-ונוסעים למלון one&only royal mirage
-לוקחים חדרים
-הולכים לסיבוב בjbr יושבים לעשן נרגילה
-ומסתובבים בטיילת
-אחר כך חוזרים למלון מתארגנים לארוחת שישי
-נאכל ארוחת שישי באחת ממסעדות המלון
-צריך לסגור
-אחרי הארוחת ערב במלון נוסעים לטופ גולף
+<title>Dubai Escape | 04–08.09</title>
 
-יום שבת -
-מתעוררים אוכלים ארוחת בוקר
-נשארים קצת בבריכה של המלון ובחוף של המלון
-הולכים לפארק מים לדעתי יש כניסה חינם בגלל שאנחנו ישנים במלון
-אוכלים צהריים בפארק מים או במלון
-חוזרים למלון להתקלח ולהתארגן
-נוסעים לדובאי מול לקראת 18:00 לראות את המופע של המזרקות ולהסתובב בקניון
-נאכל כבר ארוחת ערב בקניון מול המופע מזרקות
-אפשר לבדוק על מסיבת יאכטה לאחרי זה
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
 
-יום ראשון - קמים בבוקר אוכלים ארוחת בוקר
-ונוסעים למלון פייב לוקס
-מאמינה שיהיה מסיבת בריכה במלון אז נהיה שם נשתנה ונאכל בבריכה
-אפשר לעשות אופנועי ים בחוף של המלון
-נתקלח נתארגן ונילך לקארמה מרקט
-בערב אני סוגרת את מסעדת bagatelle מסעדה שהופכת למסיבה
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-יום שני - קמים בבוקר נהיה בבריכה של המלון יש מסיבה גם ביום הזה
-נאכל צהריים בבריכה של המלון
-הולכים להתארגן ולהתקלח
-בשעה 16:00 אוספים אותנו בג׳יפים לרייזרים במדבר
-נהיה שם עד הערב 19:00 חוזרים
-נחזור למלון נאכל ארוחת ערב במסעדה של המלון יש אפשרות או למסיתeauzone או למסעדת rotisserie
+html {
+  scroll-behavior: smooth;
+}
 
-יום שלישי- ארוחת בוקר במלון
-יש לנו טיסה בשעה 17:00
-צריך לבדוק מה לעשות לפני
+body {
+  font-family: 'Assistant', sans-serif;
+  background: #f4f0e8;
+  color: #172331;
+}
+
+/* HERO */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 30px 20px;
+  background:
+    linear-gradient(rgba(5,18,30,.35), rgba(5,18,30,.88)),
+    url("https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 700px;
+}
+
+.hero-small {
+  color: #e1c58d;
+  letter-spacing: 4px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(55px, 14vw, 105px);
+  line-height: .9;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+}
+
+.hero-date {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.hero-text {
+  font-size: 17px;
+  color: #eeeeee;
+}
+
+/* NAVIGATION */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #081927;
+  padding: 10px;
+  overflow-x: auto;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.nav a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #b99a62;
+  border-radius: 30px;
+  padding: 7px 14px;
+  margin: 3px;
+  font-size: 13px;
+}
+
+/* INTRO */
+.intro {
+  text-align: center;
+  padding: 55px 20px 25px;
+}
+
+.intro-label {
+  color: #b18a4c;
+  letter-spacing: 3px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.intro h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: #081927;
+  margin: 8px 0;
+}
+
+.intro p {
+  color: #707b84;
+  font-size: 16px;
+}
+
+/* DAYS */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 10px 15px 70px;
+}
+
+.day {
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 28px 0;
+  box-shadow: 0 12px 40px rgba(0,0,0,.08);
+}
+
+.day-header {
+  background: #081927;
+  color: white;
+  padding: 25px;
+}
+
+.day-number {
+  color: #d7b778;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.day-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-top: 4px;
+}
+
+.day-date {
+  color: #d8d8d8;
+  margin-top: 5px;
+}
+
+/* EVENTS */
+.events {
+  padding: 22px 20px;
+}
+
+.event {
+  display: grid;
+  grid-template-columns: 65px 42px 1fr;
+  gap: 10px;
+  min-height: 75px;
+  position: relative;
+}
+
+.event:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 85px;
+  top: 40px;
+  bottom: 0;
+  width: 1px;
+  background: #e6dfd2;
+}
+
+.time {
+  font-size: 13px;
+  font-weight: 700;
+  color: #172331;
+  padding-top: 6px;
+  text-align: left;
+}
+
+.icon {
+  width: 38px;
+  height: 38px;
+  background: #f7f1e5;
+  border: 1px solid #e8d9bb;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.event h3 {
+  font-size: 17px;
+  color: #081927;
+  margin-bottom: 2px;
+}
+
+.event p {
+  color: #75808a;
+  font-size: 13px;
+}
+
+.tag {
+  display: inline-block;
+  background: #fbf2df;
+  color: #997236;
+  border-radius: 20px;
+  padding: 3px 9px;
+  margin-top: 5px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.tag.red {
+  background: #fff0eb;
+  color: #b85d43;
+}
+
+/* SPECIAL BOX */
+.special {
+  margin: 5px 20px 25px;
+  background: #f9f5ed;
+  border: 1px solid #e8dcc7;
+  border-radius: 17px;
+  padding: 18px;
+}
+
+.special strong {
+  color: #081927;
+}
+
+.special p {
+  color: #707b84;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+/* FOOTER */
+footer {
+  background: #081927;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+footer h2 {
+  font-family: 'Playfair Display', serif;
+  color: #d7b778;
+  font-size: 32px;
+}
+
+footer p {
+  color: #aeb8bf;
+  margin-top: 5px;
+}
+
+/* MOBILE */
+@media(max-width:600px) {
+
+  .hero {
+    min-height: 75vh;
+  }
+
+  .hero h1 {
+    font-size: 58px;
+  }
+
+  .hero-date {
+    font-size: 18px;
+  }
+
+  .day {
+    border-radius: 20px;
+  }
+
+  .day-header {
+    padding: 22px 20px;
+  }
+
+  .day-title {
+    font-size: 24px;
+  }
+
+  .events {
+    padding: 20px 12px;
+  }
+
+  .event {
+    grid-template-columns: 55px 38px 1fr;
+    gap: 7px;
+  }
+
+  .event:not(:last-child)::after {
+    right: 72px;
+  }
+
+  .event h3 {
+    font-size: 16px;
+  }
+
+  .event p {
+    font-size: 12px;
+  }
+
+  .time {
+    font-size: 12px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-small">THE PERFECT GETAWAY</div>
+    <h1>DUBAI<br>ESCAPE</h1>
+    <div class="hero-date">04 — 08 SEPTEMBER 2026</div>
+    <div class="hero-text">
+      חמישה ימים של ים • יוקרה • מסיבות • אדרנלין
+    </div>
+  </div>
+</section>
+
+<nav class="nav">
+  <a href="#friday">שישי</a>
+  <a href="#saturday">שבת</a>
+  <a href="#sunday">ראשון</a>
+  <a href="#monday">שני</a>
+  <a href="#tuesday">שלישי</a>
+</nav>
+
+<section class="intro">
+  <div class="intro-label">OUR DUBAI ITINERARY</div>
+  <h2>Dubai, here we come ✨</h2>
+  <p>
+    הלו״ז שלנו לחופשה — מלונות, חופים, בריכות,
+    חיי לילה, מדבר והרבה רגעים טובים.
+  </p>
+</section>
+
+<main class="container">
+
+<!-- FRIDAY -->
+<section class="day" id="friday">
+
+<div class="day-header">
+  <div class="day-number">DAY 01 · FRIDAY</div>
+  <div class="day-title">נחיתה & JBR NIGHT</div>
+  <div class="day-date">04.09</div>
+</div>
+
+<div class="special">
+  <strong>🏨 One&Only Royal Mirage</strong>
+  <p>המלון שלנו ללילה הראשון</p>
+</div>
+
+<div class="events">
+
+<div class="event">
+  <div class="time">11:40</div>
+  <div class="icon">✈️</div>
+  <div><h3>המראה</h3><p>יוצאים לדרך לדובאי</p></div>
+</div>
+
+<div class="event">
+  <div class="time">16:00</div>
+  <div class="icon">🛬</div>
+  <div><h3>נחיתה בדובאי</h3><p>נחיתה והתארגנות בשדה</p></div>
+</div>
+
+<div class="event">
+  <div class="time">16:30</div>
+  <div class="icon">🚗</div>
+  <div><h3>איסוף הרכב</h3><p>אוספים את הרכב ונוסעים למלון</p></div>
+</div>
+
+<div class="event">
+  <div class="time">17:30</div>
+  <div class="icon">🏨</div>
+  <div><h3>One&Only Royal Mirage</h3><p>צ׳ק־אין, קבלת חדרים והתארגנות</p></div>
+</div>
+
+<div class="event">
+  <div class="time">19:00</div>
+  <div class="icon">🌴</div>
+  <div><h3>JBR & The Walk</h3><p>סיבוב בטיילת, נרגילה ואווירת ערב</p></div>
+</div>
+
+<div class="event">
+  <div class="time">21:00</div>
+  <div class="icon">🚿</div>
+  <div><h3>חזרה למלון</h3><p>מקלחת והתארגנות לארוחת שישי</p></div>
+</div>
+
+<div class="event">
+  <div class="time">22:00</div>
+  <div class="icon">🍽️</div>
+  <div>
+    <h3>ארוחת שישי</h3>
+    <p>באחת ממסעדות המלון</p>
+    <span class="tag red">צריך לסגור מראש</span>
+  </div>
+</div>
+
+<div class="event">
+  <div class="time">00:00</div>
+  <div class="icon">⛳</div>
+  <div><h3>Topgolf Dubai</h3><p>מסיימים את הערב במשחק ואווירה</p></div>
+</div>
+
+</div>
+</section>
+
+
+<!-- SATURDAY -->
+<section class="day" id="saturday">
+
+<div class="day-header">
+  <div class="day-number">DAY 02 · SATURDAY</div>
+  <div class="day-title">SUN, SEA & DOWNTOWN</div>
+  <div class="day-date">05.09</div>
+</div>
+
+<div class="events">
+
+<div class="event">
+  <div class="time">09:00</div>
+  <div class="icon">☕</div>
+  <div><h3>ארוחת בוקר</h3><p>פותחים את היום במלון</p></div>
+</div>
+
+<div class="event">
+  <div class="time">10:00</div>
+  <div class="icon">🏖️</div>
+  <div><h3>בריכה & חוף</h3><p>זמן רגוע בבריכה ובחוף של המלון</p></div>
+</div>
+
+<div class="event">
+  <div class="time">12:30</div>
+  <div class="icon">🌊</div>
+  <div>
+    <h3>Aquaventure</h3>
+    <p>פארק מים</p>
+    <span class="tag">לבדוק אם הכניסה כלולה</span>
+  </div>
+</div>
+
+<div class="event">
+  <div class="time">16:00</div>
+  <div class="icon">🍴</div>
+  <div><h3>ארוחת צהריים</h3><p>בפארק המים או במלון</p></div>
+</div>
+
+<div class="event">
+  <div class="time">17:00</div>
+  <div class="icon">🚿</div>
+  <div><h3>חזרה למלון</h3><p>מקלחת והתארגנות</p></div>
+</div>
+
+<div class="event">
+  <div class="time">18:00</div>
+  <div class="icon">🛍️</div>
+  <div><h3>Dubai Mall</h3><p>סיבוב בקניון</p></div>
+</div>
+
+<div class="event">
+  <div class="time">20:00</div>
+  <div class="icon">⛲</div>
+  <div><h3>Dubai Fountain</h3><p>מופע המזרקות</p></div>
+</div>
+
+<div class="event">
+  <div class="time">20:30</div>
+  <div class="icon">🍽️</div>
+  <div><h3>ארוחת ערב</h3><p>מסעדה באזור המזרקות</p></div>
+</div>
+
+<div class="event">
+  <div class="time">23:00</div>
+  <div class="icon">🛥️</div>
+  <div>
+    <h3>מסיבת יאכטה?</h3>
+    <p>אופציה להמשיך את הלילה בים</p>
+    <span class="tag red">לבדוק ולסגור</span>
+  </div>
+</div>
+
+</div>
+</section>
+
+
+<!-- SUNDAY -->
+<section class="day" id="sunday">
+
+<div class="day-header">
+  <div class="day-number">DAY 03 · SUNDAY</div>
+  <div class="day-title">POOL PARTY & BAGATELLE</div>
+  <div class="day-date">06.09</div>
+</div>
+
+<div class="special">
+  <strong>🏨 FIVE LUXE</strong>
+  <p>עוברים למלון החדש ומתחילים את יום הבריכה</p>
+</div>
+
+<div class="events">
+
+<div class="event">
+  <div class="time">09:30</div>
+  <div class="icon">☕</div>
+  <div><h3>ארוחת בוקר</h3><p>ארוחת בוקר במלון</p></div>
+</div>
+
+<div class="event">
+  <div class="time">11:00</div>
+  <div class="icon">🧳</div>
+  <div><h3>מעבר ל־FIVE LUXE</h3><p>צ׳ק־אאוט ונסיעה למלון החדש</p></div>
+</div>
+
+<div class="event">
+  <div class="time">12:30</div>
+  <div class="icon">🥂</div>
+  <div>
+    <h3>Pool Party</h3>
+    <p>בריכה, מוזיקה ואוכל</p>
+    <span class="tag">לבדוק את המסיבה</span>
+  </div>
+</div>
+
+<div class="event">
+  <div class="time">14:00</div>
+  <div class="icon">🍹</div>
+  <div><h3>Lunch by the Pool</h3><p>ארוחת צהריים בבריכה</p></div>
+</div>
+
+<div class="event">
+  <div class="time">16:00</div>
+  <div class="icon">🌊</div>
+  <div><h3>אופנועי ים</h3><p>אופציה לפעילות בחוף המלון</p><span class="tag">אופציונלי</span></div>
+</div>
+
+<div class="event">
+  <div class="time">18:00</div>
+  <div class="icon">🚿</div>
+  <div><h3>מקלחת & התארגנות</h3><p>מתכוננים לערב</p></div>
+</div>
+
+<div class="event">
+  <div class="time">19:30</div>
+  <div class="icon">🛍️</div>
+  <div><h3>Karama Market</h3><p>סיבוב בשוק קארמה</p></div>
+</div>
+
+<div class="event">
+  <div class="time">21:30</div>
+  <div class="icon">🍸</div>
+  <div><h3>Bagatelle Dubai</h3><p>ארוחת ערב שהופכת למסיבה</p><span class="tag">להזמין מקום</span></div>
+</div>
+
+</div>
+</section>
+
+
+<!-- MONDAY -->
+<section class="day" id="monday">
+
+<div class="day-header">
+  <div class="day-number">DAY 04 · MONDAY</div>
+  <div class="day-title">POOL & DESERT ADVENTURE</div>
+  <div class="day-date">07.09</div>
+</div>
+
+<div class="events">
+
+<div class="event">
+  <div class="time">09:30</div>
+  <div class="icon">☕</div>
+  <div><h3>ארוחת בוקר</h3><p>מתחילים את היום בנחת</p></div>
+</div>
+
+<div class="event">
+  <div class="time">11:00</div>
+  <div class="icon">🥂</div>
+  <div><h3>Pool Party</h3><p>בריכה ומסיבה במלון</p><span class="tag">לבדוק שעות</span></div>
+</div>
+
+<div class="event">
+  <div class="time">13:00</div>
+  <div class="icon">🍹</div>
+  <div><h3>ארוחת צהריים</h3><p>Lunch by the Pool</p></div>
+</div>
+
+<div class="event">
+  <div class="time">14:30</div>
+  <div class="icon">🚿</div>
+  <div><h3>מקלחת & התארגנות</h3><p>מתכוננים למדבר</p></div>
+</div>
+
+<div class="event">
+  <div class="time">15:30</div>
+  <div class="icon">🚙</div>
+  <div><h3>הכנה לאיסוף</h3><p>להיות מוכנים בנקודת האיסוף</p></div>
+</div>
+
+<div class="event">
+  <div class="time">16:00</div>
+  <div class="icon">🏜️</div>
+  <div><h3>Desert RZR Adventure</h3><p>איסוף בג׳יפים ויציאה למדבר</p></div>
+</div>
+
+<div class="event">
+  <div class="time">16–19</div>
+  <div class="icon">🔥</div>
+  <div><h3>הרפתקה במדבר</h3><p>RZR, דיונות, שקיעה ואדרנלין</p></div>
+</div>
+
+<div class="event">
+  <div class="time">19:00</div>
+  <div class="icon">🚙</div>
+  <div><h3>חזרה לדובאי</h3><p>חוזרים למלון</p></div>
+</div>
+
+<div class="event">
+  <div class="time">21:00</div>
+  <div class="icon">🍽️</div>
+  <div>
+    <h3>ארוחת ערב במלון</h3>
+    <p>Eauzone או The Rotisserie</p>
+    <span class="tag red">לבחור ולסגור</span>
+  </div>
+</div>
+
+</div>
+</section>
+
+
+<!-- TUESDAY -->
+<section class="day" id="tuesday">
+
+<div class="day-header">
+  <div class="day-number">DAY 05 · TUESDAY</div>
+  <div class="day-title">LAST MORNING IN DUBAI</div>
+  <div class="day-date">08.09</div>
+</div>
+
+<div class="special">
+  <strong>✈️ יום אחרון</strong>
+  <p>משאירים את הבוקר רגוע כדי לא להילחץ לפני הטיסה.</p>
+</div>
+
+<div class="events">
+
+<div class="event">
+  <div class="time">09:00</div>
+  <div class="icon">☕</div>
+  <div><h3>ארוחת בוקר</h3><p>ארוחת בוקר אחרונה במלון</p></div>
+</div>
+
+<div class="event">
+  <div class="time">10:00</div>
+  <div class="icon">🏖️</div>
+  <div><h3>בוקר רגוע</h3><p>בריכה / חוף / קפה אחרון</p></div>
+</div>
+
+<div class="event">
+  <div class="time">12:00</div>
+  <div class="icon">🧳</div>
+  <div><h3>צ׳ק־אאוט</h3><p>אורזים ונפרדים מהמלון</p></div>
+</div>
+
+<div class="event">
+  <div class="time">12:30</div>
+  <div class="icon">🍴</div>
+  <div><h3>ארוחת צהריים</h3><p>ארוחה אחרונה לפני השדה</p></div>
+</div>
+
+<div class="event">
+  <div class="time">13:30</div>
+  <div class="icon">☕</div>
+  <div>
+    <h3>סיבוב אחרון בדובאי</h3>
+    <p>קפה, קניות או סיבוב קצר במרינה</p>
+    <span class="tag">להחליט לפי הזמן</span>
+  </div>
+</div>
+
+<div class="event">
+  <div class="time">14:00</div>
+  <div class="icon">🚗</div>
+  <div><h3>יציאה לשדה</h3><p>החזרת הרכב והתארגנות לטיסה</p></div>
+</div>
+
+<div class="event">
+  <div class="time">17:00</div>
+  <div class="icon">✈️</div>
+  <div><h3>הטיסה הביתה</h3><p>Bye Dubai 👋</p></div>
+</div>
+
+</div>
+</section>
+
+</main>
+
+<footer>
+  <h2>DUBAI ESCAPE</h2>
+  <p>04 — 08 September 2026</p>
+  <p>🇦🇪 ✨ 🌴</p>
+</footer>
+
+</body>
+</html>
